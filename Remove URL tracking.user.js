@@ -9,6 +9,13 @@
 // @run-at      document-start
 // ==/UserScript==
 
+// Sources for tracking parameters:
+// https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt (AdGuard URL Tracking filter)
+// https://privacytests.org/ (Section "Tracking query parameter tests")
+// https://github.com/jparise/chrome-utm-stripper#recognized-parameters
+// https://maxchadwick.xyz/tracking-query-params-registry/
+// https://github.com/brave/brave-browser/wiki/Brave-Ads:-Reserved-click-through-URL-parameters#reserved-click-through-url-parameters
+
 function check_domain(domain) {
   return window.location.hostname == domain || window.location.hostname.endsWith("." + domain);
 }
