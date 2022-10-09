@@ -20782,11 +20782,11 @@ function injectStyle() {
   let style = document.createElement("style");
   style.type = "text/css";
   style.innerHTML = css_selectors.join(",") + "{ display: none !important; }";
-  document.querySelector("head").appendChild(style);
+  document.head.appendChild(style);
 }
 
 new MutationObserver((mutations_list, observer) => {
-  if(document.querySelector("head")) {
+  if(document.head) {
     injectStyle();
     observer.disconnect();
   }
