@@ -4,6 +4,24 @@
 // @match       *://*.imgur.com/*
 // @match       *://*.imgur.io/*
 // @match       *://*.medium.com/*
+// @match       *://*.faun.pub/*
+// @match       *://*.towardsdatascience.com/*
+// @match       *://*.uxdesign.cc/*
+// @match       *://*.uxplanet.org /*
+// @match       *://*.betterprogramming.pub/*
+// @match       *://*.aninjusticemag.com/*
+// @match       *://*.betterhumans.pub/*
+// @match       *://*.psiloveyou.xyz/*
+// @match       *://*.entrepreneurshandbook.co/*
+// @match       *://*.blog.coinbase.com/*
+// @match       *://*.levelup.gitconnected.com/*
+// @match       *://*.javascript.plainenglish.io/*
+// @match       *://*.blog.bitsrc.io/*
+// @match       *://*.itnext.io/*
+// @match       *://*.codeburst.io/*
+// @match       *://*.infosecwriteups.com/*
+// @match       *://*.blog.devgenius.io/*
+// @match       *://*.writingcooperative.com/*
 // @match       *://*.quora.com/*
 // @match       *://*.tiktok.com/*
 // @match       *://*.google.com/*
@@ -11,7 +29,7 @@
 // @match       *://*.youtube.com/*
 // @match       *://*.youtube-nocookie.com/*
 // @grant       none
-// @version     1.0
+// @version     2
 // @author      KokichaKolevTM
 // @description Redirects some services to private frontends
 // @run-at      document-start
@@ -37,6 +55,8 @@ const proxitok = ["proxitok.pussthecat.org", "proxitok.herokuapp.com", "proxitok
 const librarian = ["librarian.pussthecat.org", "lbry.bcow.xyz", "librarian.esmailelbob.xyz", "lbry.vern.cc"];
 const invidious = ["yewtu.be", "vid.puffyan.us", "inv.riverside.rocks"];
 const libreddit = ["libreddit.pussthecat.org", "libredd.it", "libreddit.spike.codes", "libreddit.privacydev.net"];
+
+// const medium_domains = ["medium.com", "faun.pub"];
 // if(invidious.includes(window.location.hostname) && !url.searchParams.has("local")) {
 //   url.searchParams.set("local", "true");
 //   window.location.replace(url.href);
@@ -58,7 +78,10 @@ else if(check_domain("imgur.com") || check_domain("imgur.io")) {
   url.hostname = rimgo[random(rimgo.length)];
   window.location.replace(url.href);
 }
-else if(check_domain("medium.com")) {
+else if(check_domain("medium.com") || check_domain("faun.pub") || check_domain("towardsdatascience.com") || check_domain("uxdesign.cc") || check_domain("uxplanet.org") || check_domain("betterprogramming.pub")
+        || check_domain("aninjusticemag.com") || check_domain("betterhumans.pub") || check_domain("psiloveyou.xyz") || check_domain("entrepreneurshandbook.co") || check_domain("blog.coinbase.com")
+        || check_domain("levelup.gitconnected.com") || check_domain("javascript.plainenglish.io") || check_domain("blog.bitsrc.io") || check_domain("itnext.io") || check_domain("codeburst.io ")
+        || check_domain("infosecwriteups.com ") || check_domain("blog.devgenius.io ") || check_domain("writingcooperative.com")) {
   window.stop();
   url.hostname = scribe[random(scribe.length)];
   window.location.replace(url.href);
@@ -82,5 +105,4 @@ else if(check_domain("google.com") && window.location.pathname === "/search") {
   window.stop();
   window.location.replace("https://www.startpage.com/sp/search?query=" + url.searchParams.get("q"));
 }
-
 
