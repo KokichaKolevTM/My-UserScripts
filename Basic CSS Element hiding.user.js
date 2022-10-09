@@ -20799,7 +20799,7 @@ new MutationObserver(mutations_list => {
       css_selectors.forEach(css_selector => {
         if(el.matches(css_selector)) {
           el.style.setProperty("display", "none", "important");
-          console.log("Override display style!!!");
+          console.log("Overrided display style!!!");
         }
       });
     }
