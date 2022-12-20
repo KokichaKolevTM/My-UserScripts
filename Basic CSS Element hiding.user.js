@@ -16344,7 +16344,7 @@ const css_selectors = [
     '[id^="google_ads_iframe"]',
     '[id^="section-ad-banner"]',
     '[name^="google_ads_iframe"]',
-    '[onclick^="location.href='http://www.reimageplus.com"]',
+    '[onclick^="location.href=\'http://www.reimageplus.com"]',
     'a-ad',
     'a[href*=".engine.adglare.net/"]',
     'a[href*=".flndmyiove.net/"]',
