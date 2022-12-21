@@ -25,7 +25,8 @@ if (location.search !== "") {
   let url = new URL(window.location.href);
   let params = url.searchParams;
   const keys = Array.from(params.keys());
-  for (let i = 0; i < trackparams.length; i++) {
+  const length = trackparams.length;
+  for (let i = 0; i < length; i++) {
       if (keys.includes(trackparams[i])) {
           if ((check_domain("alo.bg") && trackparams[i] === "ad_id") ||
               (keys.includes("mkt_unsubscribe") && trackparams[i] === "mkt_tok")) {
