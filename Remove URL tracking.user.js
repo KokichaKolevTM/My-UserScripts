@@ -10,6 +10,7 @@
 // ==/UserScript==
 
 // Sources for tracking parameters:
+// https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt (➗ Actually Legitimate URL Shortener Tool)
 // https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt (AdGuard URL Tracking filter)
 // https://privacytests.org/ (Section "Tracking query parameter tests")
 // https://github.com/jparise/chrome-utm-stripper#recognized-parameters
